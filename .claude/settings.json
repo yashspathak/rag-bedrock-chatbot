@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(python -m src.ingest*)",
+      "Bash(python -m pytest*)",
+      "Bash(python -m py_compile *)",
+      "Bash(python -m venv *)",
+      "Bash(pip install *)",
+      "Bash(docker compose up *)",
+      "Bash(docker compose ps*)",
+      "Bash(docker compose logs *)",
+      "Bash(./scripts/bootstrap_local.sh)",
+      "Bash(aws --endpoint-url *)",
+      "Bash(ollama pull *)",
+      "Bash(ollama list*)",
+      "Bash(git status*)",
+      "Bash(git diff *)",
+      "Bash(git log *)"
+    ],
+    "ask": [
+      "Bash(python -m src.chat*)",
+      "Bash(docker compose --profile ollama *)",
+      "Bash(docker compose down *)",
+      "Bash(aws *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
+    ],
+    "deny": [
+      "Read(./.env)",
+      "Read(./.env.*)",
+      "Edit(./.env)",
+      "Edit(./.env.*)",
+      "Read(~/.aws/**)",
+      "Edit(~/.aws/**)",
+      "Bash(curl *)"
+    ]
+  },
+  "companyAnnouncements": [
+    "Local-first RAG: S3 and OpenSearch run on LocalStack Community; embeddings default to MiniLM and chat to Ollama.",
+    "Never send bedrock-runtime to LocalStack. Use real AWS only when EMBEDDING_PROVIDER or LLM_PROVIDER is bedrock.",
+    "Query and ingest must share the same embedding model and dimension. Changing either requires a full re-ingest.",
+    "Do not add LangChain or a second config system. Extend the existing provider ABCs in src/embeddings.py and src/llm.py."
+  ]
+}

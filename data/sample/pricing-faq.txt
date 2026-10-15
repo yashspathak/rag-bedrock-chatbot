@@ -1,0 +1,16 @@
+Nimbus Desk pricing FAQ
+
+How much does Starter cost?
+Starter is $19 per agent per month, billed annually, or $25 month-to-month. It includes 3 agents, 1,000 tickets per month, and email support.
+
+How much does Team cost?
+Team is $49 per agent per month billed annually. It includes unlimited tickets, live chat, a shared inbox, and 1 year of ticket retention.
+
+How much does Enterprise cost?
+Enterprise starts at $99 per agent per month with a 20-agent minimum. Pricing includes SSO, 7-year retention, a dedicated success manager, and a 99.9% uptime SLA.
+
+Is there a free trial?
+Yes. Every plan has a 14-day trial. No credit card is required for Starter. Team and Enterprise trials require a work email.
+
+Can I change plans later?
+Yes. Upgrades take effect immediately. Downgrades take effect at the next billing date. Unused seats are not refunded mid-cycle.

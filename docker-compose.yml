@@ -1,0 +1,26 @@
+services:
+  localstack:
+    image: localstack/localstack:4.3
+    ports:
+      - "4566:4566"
+    environment:
+      SERVICES: s3,opensearch
+      DEBUG: "0"
+      AWS_DEFAULT_REGION: us-east-1
+      OPENSEARCH_ENDPOINT_STRATEGY: path
+    volumes:
+      - localstack-data:/var/lib/localstack
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  ollama:
+    image: ollama/ollama:latest
+    ports:
+      - "11434:11434"
+    volumes:
+      - ollama-data:/root/.ollama
+    profiles:
+      - ollama
+
+volumes:
+  localstack-data:
+  ollama-data:
